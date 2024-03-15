@@ -1,15 +1,10 @@
 # Imports
 import os
-import subprocess as sub
+import subprocess
 import toml
-from rich.console import Console
-from rich.markdown import Markdown
-from rich.panel import Panel
 
-console = Console()
-
-with open('../msm.toml', 'r') as f:
-    config = toml.load(f)
+from textual.app import App, ComposeResult
+from textual.widgets import Header, Footer
 
 class Server:
     def __init__(self, name, path, modLoader, mods):
@@ -17,3 +12,10 @@ class Server:
         self.path = path
         self.modLoader = modLoader
         self.mods = mods
+
+class Msm(App):
+    
+
+if __name__ == "__main__":
+    app = Msm()
+    app.run()
