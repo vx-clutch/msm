@@ -1,0 +1,5 @@
+[path]
+path = "foo"
+[ram]
+Xms = "1G"
+Xmx = "4G"
